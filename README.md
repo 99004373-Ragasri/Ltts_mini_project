@@ -1,1 +1,1 @@
-# Ltts_mini_project
+# Hangman_mini_project
