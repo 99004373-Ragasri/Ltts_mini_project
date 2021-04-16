@@ -35,22 +35,23 @@
 #### Some words are stored in a dictionary. A random word is taken from dictionary. The player gives the input as a alphabet to guess the word. The player gets 7 chances to guess the correct word. For every incorrect letter the sketch of hangman begins. Once the formation is done the player will lose the game otherwise he wins.
 ## Detail requirements
 ### High Level Requirements:
+   | ID | Description | Category | Status | 
+| ----- | ----- | ------- | ---------|
+| HR01 | Able to access the word from file for guessing | Techincal | IMPLEMENTED | 
+| HR02 | Proper flow while checking a letter and proceeding for next steps | Techincal |  IMPLEMENTED  |
+| HR03 | Game should ends with accurate results | Techincal |  IMPLEMENTED  |
 
-      |    ID	     |             Description	                                           |    Status    |    
-      |   --------   |        ---------------------------------                            |    --------  |
-      |  HR01	     | Able to access the word from file for guessing.	                   |  Implemented |
-      |  HR02	     | Proper flow while checking a letter and proceeding for next steps.  |  Implemented |
-      |  HR03	     | Game should ends with accurate results	                           |  Implemented |
-		
 ### Low level Requirements:
-		
-     ID	                  Description	 HLR ID	    Status
-  LR01	Able to access the word from file	  HR01	Implemented
-  LR02	Able to store the incomplete word with blank spaces after every guess	  HR02	Implemented
-  LR03	Able to construct the hangman sketch after every wrong guess	  HR02	Implemented
-  LR04	Able to check whether a letter from alphabet is present or not.	  HR02	Implemented
-  LR05	Able to specify user has won if the word is guessed within 7 incorrect guesses	  HR03	Implemented
-  LR06	Able to specify user has lost if the word is not guessed within 7 incorrect guesses	  HR03	Implemented
+| ID | Description | HLR ID | Status (Implemented/Future) |
+| ------ | --------- | ------ | ----- |
+| LR01 | Able to access the word from file | HR01 |  IMPLEMENTED  |
+| LR02 | Able to store the incomplete word with blank spaces after every guess | HR02 |  IMPLEMENTED |
+| LR03 | Able to construct the hangman sketch after every wrong guess | HR02 | FUTURE |
+| LR04 | Able to check whether a letter from alphabet is present or not | HR02 |  IMPLEMENTED  |
+| LR05 | Able to specify user has won if the word is guessed within 7 incorrect guesses	 | HR03 |  IMPLEMENTED  |
+| LR06 | Able to specify user has lost if the word is not guessed within 7 incorrect guesses | HR03 |  IMPLEMENTED  |
+
+  
 		
 		
 
