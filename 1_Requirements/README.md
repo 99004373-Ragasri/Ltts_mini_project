@@ -37,9 +37,9 @@
 ### High Level Requirements:
 
       |    ID	     |             Description	                                           |    Status    |    
-      |   --------   |           ---------------------------------                         |    --------  |
+      |   --------   |        ---------------------------------                            |    --------  |
       |  HR01	     | Able to access the word from file for guessing.	                   |  Implemented |
-      |  HR02	     |  Proper flow while checking a letter and proceeding for next steps. |  Implemented |
+      |  HR02	     | Proper flow while checking a letter and proceeding for next steps.  |  Implemented |
       |  HR03	     | Game should ends with accurate results	                           |  Implemented |
 		
 ### Low level Requirements:
