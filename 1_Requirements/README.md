@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 #### Hangman is a popular word guessing game where the player attempts to build a missing word by guessing one letter at a time. If a player guesses the word within the chances then he wins.   After a certain number of incorrect guesses, the game ends and the player loses. The game process is shown by a sketch of a man being hanged.
 ### Research
 ### Hangman Game Play
@@ -17,11 +17,11 @@
 ### Defining Our System
 #### A random word is taken from a dictionary containing set of words. The player should give the input within the alphabets. The player has to guess the word within 7 chances. For every correct guess the letter is revealed in its position. If the player guesses the wrong letter the formation of hangman starts. The player wins if he guesses the word within the given 7 chances or else the complete formation of hangman occurs and the player loses the game. 
 
-## Swot Analysis
+# Swot Analysis
 
 ## ![swott](https://user-images.githubusercontent.com/39005938/115008809-3503f900-9ec9-11eb-8362-cb08c7be6fdd.PNG)
 
-### 4W's and 1'H
+# 4W's and 1'H
 ### Who:
 #### This game can be played by all age groups without age barrier. 
 ### What:
