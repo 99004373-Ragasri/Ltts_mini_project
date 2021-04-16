@@ -112,18 +112,7 @@ char (*loadDict(int *n))[50] {
     //Choose which ever the dictionary you like by uncommenting 2 lines
     //and commenting the rest
     
-    //uncomment below 2 lines for bigDictionary.txt
-    //long wordsCount = 267751;
-    //FILE *fp =  fopen("bigDictionary.txt", "r");
-    
-    //-------------------OR------------------------
-    //uncomment below 2 lines for smallDictionary.txt
-    //long wordsCount = 847;
-    //FILE *fp =  fopen("smallDictionary.txt", "r");
-    
-    //-------------------OR------------------------
-    //uncomment below 2 lines for verySmallDictionary.txt
-     long wordsCount = 20;
+    long wordsCount = 20;
     FILE *fp =  fopen("verySmallDictionary.txt", "r");
 
     // DO NOT DISTURB BELOW CODE.
