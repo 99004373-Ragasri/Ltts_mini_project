@@ -8,7 +8,6 @@
 ### Hangman Formation Chances
                              
 ### Cost and Features
-#### [swot.docx](https://github.com/ragasrikonakalla/Ltts_mini_project/files/6324158/swot.docx)
 #### •	A random word is taken from a dictionary.
 #### •	The player gives the input from a given set of alphabets.
 #### •	The player gets 7 chances to guess the word.
