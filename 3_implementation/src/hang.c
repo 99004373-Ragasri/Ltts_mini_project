@@ -2,12 +2,6 @@
 #include <ctype.h>
 #include "hang.h"
 
-void displayDictionary(char dict[][50], int n) {
-    for (int i = 0; i < n; i++) {
-        printf("%s\n", dict[i]);
-    }
-}
-
 int getRandom(int n) {
     static bool flag = true;
     if (flag) {
