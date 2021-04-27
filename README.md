@@ -7,9 +7,7 @@ Folder             | Description
 `4_Test_plan`      | Documents with test plans and procedures
 
 
-[![C-Build](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/c-build.yml/badge.svg)](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/c-build.yml)
-
-[![Cpp_Check](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/cpp_check.yml/badge.svg)](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/cpp_check.yml)
+[![C-Build](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/c-build.yml/badge.svg)](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/c-build.yml)[![Cpp_Check](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/cpp_check.yml/badge.svg)](https://github.com/ragasrikonakalla/Ltts_mini_project/actions/workflows/cpp_check.yml)
 
 ## HANGMAN GAME  
 #### Hangman is a popular word guessing game where the player attempts to build a missing word by guessing one letter at a time. If a player guesses the word within the chances then he wins.   After a certain number of incorrect guesses, the game ends and the player loses. The game process is shown by a sketch of a man being hanged
