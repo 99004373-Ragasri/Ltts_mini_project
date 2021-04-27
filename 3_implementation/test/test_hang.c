@@ -7,8 +7,10 @@
 #include <stdbool.h>
 #include <time.h>
 
-void test_getRandom(void *n);
-void n=4;
+#define PROJECT_NAME   "hangman"
+
+void *test_getRandom(void *n);
+int n=4;
 bool flag=true;
 
 void setUp(){
@@ -17,7 +19,7 @@ void setUp(){
 void tearDown(){
 
 }
-void main()
+int main()
 {
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
@@ -30,7 +32,7 @@ void main()
   return UNITY_END();
 }
 
-void test_getRandom(void *n){
+void *test_getRandom(void *n){
 
 TEST_ASSERT_EQUAL(clock, getRandom(4));
 }
