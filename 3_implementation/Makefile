@@ -3,7 +3,7 @@ TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
 BUILD_DIR = Build
 
-SRC = src/line_hang.c
+SRC = src/hang.c
 
 TEST_SRC = test_file/test_hang.c\
 unity/unity.c
