@@ -1,65 +1,53 @@
-# Name of the project
-PROJECT_NAME = hangman
+PROJ_NAME = hangman
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-# Output directory
-BUILD = build
+BUILD_DIR = Build
 
-# All source code files
-SRC = hangman.c\
-src/hang.c
+SRC = src/line_hang.c
 
-# All test source files
-TEST_SRC = src/hang.c\
-test/test_hang.c\
-unity/unity.c\
+TEST_SRC = test_file/test_hang.c\
+unity/unity.c
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+INC = -Iinc\
+-Iunity
 
-# All include folders with header files
-INC	= -Iinc\
--Iunity\
+ifdef OS
+   RM = del /q
+   FixPath = $(subst /,\,$1)
+   EXEC = exe
+else
+   ifeq ($(shell uname), Linux)
+      RM = rm -rf
+      FixPath = $1
+	  EXEC = out -lm
+   endif
+endif
 
-#Library Inlcudes
-#if working with CUnit 
-#INCLUDE_LIBS = -lcunit
-INCLUDE_LIBS =
+.PHONY : all test coverage run clean doc
 
-# Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+all:$(BUILD_DIR)
+	gcc hangman.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-# Document files
-DOCUMENTATION_OUTPUT = documentation/html
+run: all
+	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
-# Default target built
-$(PROJECT_NAME):all
+test: $(SRC) $(TEST_SRC)
+	gcc $^ $(INC) -o $(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(TEST_PROJ_NAME).$(EXEC))
 
-# Run the target even if the matching name exists
-.PHONY: run clean test doc all
+coverage:${PROJECT_NAME}
+	gcc $(INC) -fprofile-arcs -ftest-coverage $(SRC) $(TEST_SRC) -o $(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
+	$(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
+	gcov -a $(SRC) $(TEST_SRC)
+cpp:
+		cppcheck enable=all $(SRC) hangman.c 
+doc:
+	make -C docmak
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
-
-# Call `make run` to run the application
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
-
-# Document the code using Doxygen
-#doc:
-#	make -C ./documentation
-
-# Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-#Coverage
-coverageCheck:$(BUILD)
-	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
-
-# Remove all the built files, invoke by `make clean`
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	$(RM) $(call FixPath,$(BUILD_DIR)/*)
+	make clean -C doc
+	rmdir $(BUILD_DIR) doc/html
 
-# Create new build folder if not present
-$(BUILD):
-	mkdir build
+$(BUILD_DIR):
+	mkdir $(BUILD_DIR)
