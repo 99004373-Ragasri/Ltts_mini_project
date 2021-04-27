@@ -9,7 +9,7 @@
 
 int test_getRandom(int *n);
 int n;
-bool flag=True;
+bool flag=true;
 
 void setUp(){
 
