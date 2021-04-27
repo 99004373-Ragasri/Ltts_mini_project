@@ -9,7 +9,7 @@
 
 #define PROJECT_NAME   "hangman"
 
-void *(test_getRandom)(void *n);
+void test_getRandom(void *n);
 int n=4;
 bool flag=true;
 
@@ -32,7 +32,7 @@ int main()
   return UNITY_END();
 }
 
-void *(test_getRandom)(void *n){
+void test_getRandom(void *n){
 
-TEST_ASSERT_EQUAL(4, getRandom(4));
+TEST_ASSERT_EQUAL(clock, getRandom(4));
 }
