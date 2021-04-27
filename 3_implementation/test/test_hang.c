@@ -7,8 +7,8 @@
 #include <stdbool.h>
 #include <time.h>
 
-int test_getRandom(int *n);
-int n;
+void test_getRandom(void *n);
+void n=4;
 bool flag=true;
 
 void setUp(){
@@ -17,7 +17,7 @@ void setUp(){
 void tearDown(){
 
 }
-int main()
+void main()
 {
 /* Initiate the Unity Test Framework */
   UNITY_BEGIN();
@@ -30,7 +30,7 @@ int main()
   return UNITY_END();
 }
 
-int test_getRandom(int *n){
+void test_getRandom(void *n){
 
-TEST_ASSERT_EQUAL(clock, getRandom(4,clock));
+TEST_ASSERT_EQUAL(clock, getRandom(4));
 }
