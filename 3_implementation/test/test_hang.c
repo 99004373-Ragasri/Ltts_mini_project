@@ -1,5 +1,11 @@
 #include "hang.h"
 #include "unity.h"
+#include <stdio.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+#include <time.h>
 
 int test_getRandom(int n);
 
