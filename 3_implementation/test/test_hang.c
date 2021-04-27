@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include <time.h>
 
-int test_getRandom(int n);
+void test_getRandom(void n);
 
 void setUp(){
 
@@ -28,7 +28,7 @@ int main()
   return UNITY_END();
 }
 
-int test_getRandom(int n){
+void test_getRandom(void n){
 n=4
 flag = true
 TEST_ASSERT_EQUAL(clock, getRandom(4,clock));
