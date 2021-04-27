@@ -26,7 +26,7 @@ endif
 .PHONY : all test coverage run clean doc
 
 all:$(BUILD_DIR)
-	gcc main_file.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
+	gcc hangman.c $(SRC) $(INC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
 
 run: all
 	$(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).$(EXEC))
@@ -40,7 +40,7 @@ coverage:${PROJECT_NAME}
 	$(call FixPath,$(BUILD_DIR)/$(COVERAGE_PROJ_NAME).$(EXEC))
 	gcov -a $(SRC) $(TEST_SRC)
 cpp:
-		cppcheck enable=all $(SRC) main_file.c 
+		cppcheck enable=all $(SRC) hanngman.c 
 doc:
 	make -C docmak
 

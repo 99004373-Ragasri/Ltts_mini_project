@@ -15,7 +15,6 @@
 char word[50];
 
 int main() {
-    void hang.loop1();
     printf("~~~~~~~~~~~~~~~:HANGMAN:~~~~~~~~~~~~~~~\n~~~~~~~~~~~Word guess game~~~~~~~~~~~\n");
     int n;
     char (*dict)[50] = loadDict(&n);
