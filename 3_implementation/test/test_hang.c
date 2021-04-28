@@ -30,7 +30,7 @@ int main()
   return UNITY_END();
 }
 
-int test_getRandom(int *n){
+int test_getRandom(int n){
   int a=20;
   int min(n){
     if(n<a){
