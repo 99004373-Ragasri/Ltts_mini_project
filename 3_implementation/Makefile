@@ -51,6 +51,8 @@ run:$(PROJECT_NAME)
 test:$(BUILD)
 	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
 	./$(TEST_OUTPUT)
+cpp:
+	cppcheck enable=all $(SRC) hangman.c 
 #Coverage
 coverageCheck:$(BUILD)
 	g++ -fprofile-arcs -ftest-coverage -fPIC -O0 $(TEST_SRC) $(INC) -o $(TEST_OUTPUT)
