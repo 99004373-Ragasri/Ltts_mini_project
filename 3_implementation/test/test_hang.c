@@ -31,9 +31,9 @@ int main()
 }
 
 int test_getRandom(int *n){
-  int n=4;
+  int a=20;
   bool min(n){
-    if(geRandom()>n){
+    if(geRandom()<a){
       return true;
     }else{
       return false;
