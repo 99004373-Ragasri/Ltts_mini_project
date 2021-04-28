@@ -5,7 +5,7 @@ BUILD_DIR = Build
 
 SRC = src/hang.c
 
-TEST_SRC = test_file/test_hang.c\
+TEST_SRC = test/test_hang.c\
 unity/unity.c
 
 INC = -Iinc\
