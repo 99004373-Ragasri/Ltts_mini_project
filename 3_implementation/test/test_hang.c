@@ -9,7 +9,7 @@
 
 #define PROJECT_NAME   "hangman"
 
-int test_getRandom(int *n);
+int test_getRandom(int n);
 
 void setUp(){
 
