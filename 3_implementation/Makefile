@@ -54,11 +54,11 @@ test:$(BUILD)
 	
 cpp:
 	cppcheck enable=all $(SRC) hangman.c 
-coverage:
-	cp test/test_hang.c .
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
-	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
-	gcov -a $(COV_SRC)
+coverageCheck:$(PROJECT_NAME)
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(call FixPath,$(TEST_OUTPUT))
+	$(call FixPath,$(TEST_OUTPUT))
+	gcov -a hangman.c
+
 
 valgrind:
 	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
