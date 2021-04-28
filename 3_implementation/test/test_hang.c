@@ -32,11 +32,11 @@ int main()
 
 int test_getRandom(int *n){
   int a=20;
-  bool min(n){
+  int min(n){
     if(n<a){
-      return true;
+      return 1;
     }else{
-      return false;
+      return 0;
     }
 
 TEST_ASSERT_EQUAL(min(4), min(getRandom(4)));
