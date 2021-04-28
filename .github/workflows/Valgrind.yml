@@ -20,4 +20,4 @@ jobs:
     - name: make test
       run: |
         make test -C 3_implementation
-        valgrind  3_implementation/Build/Test_hang.out
+        valgrind  3_implementation/Build/Test_hangman.out
