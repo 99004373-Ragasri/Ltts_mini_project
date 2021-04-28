@@ -33,7 +33,7 @@ int main()
 int test_getRandom(int *n){
   int a=20;
   bool min(n){
-    if(geRandom()<a){
+    if(n<a){
       return true;
     }else{
       return false;
