@@ -9,7 +9,7 @@
 
 #define PROJECT_NAME   "hangman"
 
-int test_getRandom(int n);
+void test_getRandom();
 
 void setUp(){
 
@@ -30,14 +30,7 @@ int main()
   return UNITY_END();
 }
 
-int test_getRandom(int n){
-  int a=20;
-  int min(n){
-    if(n<a){
-      return 1;
-    }else{
-      return 0;
-    }
-
-TEST_ASSERT_EQUAL(min(4), min(getRandom(4)));
+void test_getRandom(){
+ 
+TEST_ASSERT_EQUAL(true, getRandom(20)<20);
 }
