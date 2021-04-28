@@ -10,7 +10,6 @@
 #define PROJECT_NAME   "hangman"
 
 int test_getRandom(int *n);
-int n=4;
 
 void setUp(){
 
@@ -32,6 +31,13 @@ int main()
 }
 
 int test_getRandom(int *n){
+  int n=4;
+  bool min(n){
+    if(geRandom()>n){
+      return true;
+    }else{
+      return false;
+    }
 
-TEST_ASSERT_EQUAL(4, getRandom(4));
+TEST_ASSERT_EQUAL(min(4), min(getRandom(4)));
 }
